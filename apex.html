@@ -7,15 +7,14 @@
 <meta name="description" content="Case study: APEX logo and brand identity for a computer hardware and technology brand, designed by Amandi Hansika.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Barlow:wght@400;500;600;700&family=Inter+Tight:wght@200;300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="theme.css">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Barlow:wght@400;500;600;700&family=Syne:wght@800&display=swap" rel="stylesheet">
 <style>
 :root{
-  --bg:#060608; --bg2:#0B0B10; --card:#111118; --line:rgba(237,230,214,.12);
-  --text:#F3EFE6; --muted:#8B8A96; --ice:#9ACBFF;
+  --bg:#080D18; --bg2:#0C1322; --card:#101A2E; --line:#1D2A44;
+  --text:#FFFFFF; --muted:#93A0B8; --ice:#9ACBFF;
   --blue:#168BFF; --red:#FF303F; --silver:#C7D0DD;
   --display:'Barlow Condensed','Arial Narrow',system-ui,sans-serif;
-  --body:'Inter Tight',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --body:'Barlow',system-ui,-apple-system,'Segoe UI',sans-serif;
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
@@ -28,7 +27,7 @@ section{padding:100px 0;position:relative}
 h1,h2,h3{font-family:var(--display);line-height:1;text-transform:uppercase;letter-spacing:.01em;font-weight:700}
 h2{font-size:clamp(2.6rem,6.4vw,5rem);margin-bottom:20px}
 h2 b{color:var(--blue);font-weight:700} h2 b.r{color:var(--red)}
-.eyebrow{font-family:var(--mono);font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--blue);font-weight:600;margin-bottom:16px;display:flex;gap:12px;align-items:center}
+.eyebrow{font-size:.74rem;letter-spacing:.3em;text-transform:uppercase;color:var(--blue);font-weight:600;margin-bottom:16px;display:flex;gap:12px;align-items:center}
 .eyebrow::before{content:"";width:30px;height:2px;background:var(--red)}
 .lead{color:var(--muted);max-width:660px;font-size:1.06rem}
 .band{background:var(--bg2);border-block:1px solid var(--line)}
@@ -47,14 +46,20 @@ h2 b{color:var(--blue);font-weight:700} h2 b.r{color:var(--red)}
 .in .lt{animation:letter .7s cubic-bezier(.2,.8,.2,1) forwards;animation-delay:var(--d,0s)}
 
 /* nav */
-.btn{display:inline-flex;align-items:center;gap:10px;padding:13px 22px;border-radius:4px;font-family:var(--mono);font-weight:400;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;border:1px solid var(--line);transition:transform .25s,border-color .25s,background .25s;cursor:pointer;background:none;color:var(--text);font-family:inherit}
+nav{position:fixed;top:0;left:0;right:0;z-index:50;padding:18px 0;transition:background .3s,border-color .3s;border-bottom:1px solid transparent}
+nav.scrolled{background:rgba(8,13,24,.78);backdrop-filter:blur(14px);border-color:var(--line)}
+nav .wrap{display:flex;justify-content:space-between;align-items:center}
+.logo{font-family:'Syne',var(--display);font-weight:800;font-size:1.25rem}
+.logo b{color:#FF5C7A}
+.cursor,.cursor-dot{position:fixed;top:0;left:0;pointer-events:none;z-index:90;border-radius:50%;transform:translate(-50%,-50%)}
+.cursor{width:38px;height:38px;border:1.5px solid rgba(255,255,255,.5);transition:width .25s,height .25s,background .25s,border-color .25s;mix-blend-mode:difference}
+.cursor.big{width:76px;height:76px;background:#fff;border-color:#fff}
+.cursor-dot{width:6px;height:6px;background:#FF5C7A}
+@media (hover:none){.cursor,.cursor-dot{display:none}}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:12px 24px;border-radius:999px;font-weight:600;font-size:.92rem;border:1px solid var(--line);transition:transform .25s,border-color .25s,background .25s;cursor:pointer;background:none;color:var(--text);font-family:inherit}
 .btn:hover{transform:translateY(-3px);border-color:var(--blue)}
 .btn.primary{background:var(--blue);border-color:var(--blue)}
-#progress{position:fixed;top:0;left:0;height:2px;width:0;background:linear-gradient(90deg,var(--peach),var(--lilac));z-index:70}
-.hero .corners{inset:clamp(74px,11vh,96px) clamp(14px,2.6vw,36px) clamp(18px,3.4vh,34px);z-index:3}
-.hero .hudl{position:absolute;z-index:3;left:clamp(32px,4.4vw,56px);right:clamp(32px,4.4vw,56px);display:flex;justify-content:space-between;gap:16px;font-family:var(--mono);font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:var(--cream)}
-.hero .hudl.t{top:calc(clamp(74px,11vh,96px) + 16px)}.hero .hudl.b{bottom:calc(clamp(18px,3.4vh,34px) + 16px)}
-@media (max-width:700px){.hero .hudl .hide-m{display:none}}
+#progress{position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,#7C5CFF,#FF5C7A);z-index:60}
 
 /* hero */
 .hero{position:relative;min-height:100vh;display:grid;place-items:center;text-align:center;overflow:hidden;padding:120px 0 80px}
@@ -226,6 +231,7 @@ h2 b{color:var(--blue);font-weight:700} h2 b.r{color:var(--red)}
 .next{text-align:center}
 .next h2{font-size:clamp(3rem,9vw,7rem)}
 .next p{color:var(--muted);max-width:620px;margin:0 auto 26px}
+footer{border-top:1px solid var(--line);padding:26px 0;color:var(--muted);font-size:.84rem;text-align:center}
 
 @media (max-width:900px){
   section{padding:76px 0}
@@ -252,21 +258,14 @@ h2 b{color:var(--blue);font-weight:700} h2 b.r{color:var(--red)}
 </head>
 <body>
 <div id="progress"></div>
-<div class="grain" aria-hidden="true"></div>
-<nav class="nav">
-  <div class="wrap">
-    <a href="index.html" class="brand">amandi<b>.</b></a>
-    <div class="links"><a href="index.html#work">Work</a><a href="index.html#services">Services</a><a href="index.html#about">About</a><a href="index.html#contact">Contact</a></div>
-    <a href="index.html#work" class="pill ghost">← All work</a>
-    <button id="burger" aria-label="Menu">MENU</button>
-  </div>
-</nav>
+<div class="cursor" aria-hidden="true"></div><div class="cursor-dot" aria-hidden="true"></div>
+<nav id="nav"><div class="wrap">
+  <a href="index.html" class="logo">amandi<b>.</b></a>
+  <a href="index.html#work" class="btn">← All work</a>
+</div></nav>
 
 <!-- ============ HERO ============ -->
 <header class="hero">
-  <div class="corners"><i></i><i></i><i></i><i></i></div>
-  <div class="hudl t"><span class="recl">REC · Case study 01</span><span class="hide-m">CAM A · 4K · 24 FPS</span></div>
-  <div class="hudl b"><span>PRJ 01 · Branding · 2026</span><span class="hide-m">Scroll to explore ↓</span></div>
   <div class="rays"></div><div class="glow gl1"></div><div class="glow gl2"></div>
   <div class="wrap">
     <svg id="logo" class="play" viewBox="0 0 520 363" role="img" aria-label="APEX logo">
@@ -854,10 +853,7 @@ h2 b{color:var(--blue);font-weight:700} h2 b.r{color:var(--red)}
     <a class="btn primary" href="index.html#work">← Back to all projects</a>
   </div>
 </section>
-<footer>
-  <div class="wrap"><span>© <span id="yr"></span> Amandi Hansika</span><span>Case study 01 · APEX Logo Branding</span><a href="index.html#work">← Back to all work</a></div>
-</footer>
-<script src="theme.js"></script>
+<footer>© <span id="yr"></span> Amandi Hansika. All rights reserved.</footer>
 
 <script>
 const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
@@ -965,9 +961,15 @@ const io=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return
 $$('.rv').forEach(e=>io.observe(e));
 
 /* nav + progress */
-addEventListener('scroll',()=>{
+addEventListener('scroll',()=>{$('#nav').classList.toggle('scrolled',scrollY>40);
   $('#progress').style.width=(scrollY/(document.documentElement.scrollHeight-innerHeight)*100)+'%'},{passive:true});
 $('#yr').textContent=new Date().getFullYear();
+
+/* cursor */
+const cur=$('.cursor'),dot=$('.cursor-dot');let cx=0,cy=0,tx=0,ty=0;
+addEventListener('mousemove',e=>{tx=e.clientX;ty=e.clientY;dot.style.left=tx+'px';dot.style.top=ty+'px'});
+(function loop(){cx+=(tx-cx)*.18;cy+=(ty-cy)*.18;cur.style.left=cx+'px';cur.style.top=cy+'px';requestAnimationFrame(loop)})();
+document.addEventListener('mouseover',e=>cur.classList.toggle('big',!!e.target.closest('a,button,.sw,.vt,.mt')));
 </script>
 </body>
 </html>

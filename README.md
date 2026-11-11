@@ -1,17 +1,15 @@
-# Amandi Hansika — Portfolio
+# Amandi Hansika — Graphic Design Portfolio
 
-Graphic design, video and photography portfolio. Theme: **"One eye, many lenses"**: a black studio seen through a camera viewfinder, with an iridescent 3D glass object.
+Dark studio theme: charcoal background with electric violet, hot coral and soft white.
 
 Live: https://amandihansik.github.io/portfolio/
 
 ## Files
-- `index.html` — home page (hero, showreel, work, services, about, contact)
+- `index.html` — home page (hero, work, about, services, contact)
+- `hero.js` — the animated hero: glowing "design ocean" (WebGL light rays and caustics) with vector jellyfish, a school of tiny shapes, bubbles and sparkles
 - `apex.html` — APEX Logo Branding case study
-- `theme.css` / `theme.js` — shared look: colours, fonts, nav, focus-bracket cursor, reveal animations
-- `lens.js` — the 3D hero (WebGL, no libraries): the glass object morphs sphere → cube → ring → lens as you scroll
 - `images/` — project images
 
 ## Editing
-- **Projects:** the `PROJECTS` list in `index.html` (title, category, image, case study link).
-- **Hero texts:** the four `.ph` blocks in `index.html`.
+- **Projects:** the `PROJECTS` list near the bottom of `index.html` (title, category, image, case study link).
 - **Email and social links:** search `EDIT:` in `index.html`.
