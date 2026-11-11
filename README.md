@@ -1,16 +1,16 @@
-# Amandi Hansika — Graphic Design Portfolio
+# Amandi Hansika — Graphic Designer Portfolio
 
-Magical deep-sea theme: you start at the glowing surface in the hero and sink deeper as you scroll. Electric violet, hot coral, soft pink and sky blue on deep violet.
+Modern, professional portfolio: near-black background, off-white type, one coral accent, Inter Tight headlines with Instrument Serif italic accents.
 
 Live: https://amandihansik.github.io/portfolio/
 
 ## Files
-- `index.html` — home page (hero, work, about, services, contact)
-- `hero.js` — the animated hero: glowing "design ocean" (WebGL light rays and caustics) with vector jellyfish, a school of tiny shapes, bubbles and sparkles
-- `ambient.js` — the deep sea behind every page: glowing plankton with depth parallax, distant jellyfish, bubbles, and the sparkle trail behind the cursor
+- `index.html` — home page (hero, selected work, services, process, about, contact)
 - `apex.html` — APEX Logo Branding case study
+- `cursor.js` — the magic cursor used on every page: glass orb, glowing dot and sparkle trail. Add `data-cur="Label"` to any element to show a label in the orb on hover.
 - `images/` — project images
 
 ## Editing
-- **Projects:** the `PROJECTS` list near the bottom of `index.html` (title, category, image, case study link).
-- **Email and social links:** search `EDIT:` in `index.html`.
+- **Projects:** the `PROJECTS` list near the bottom of `index.html` (title, category, year, image, case study link). Set `feat:true` for a full-width featured project.
+- **Services:** the `SERVICES` list in the same script.
+- **Email, social links, availability note, experience:** search `EDIT:` in `index.html`.

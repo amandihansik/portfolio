@@ -7,14 +7,14 @@
 <meta name="description" content="Case study: APEX logo and brand identity for a computer hardware and technology brand, designed by Amandi Hansika.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Barlow:wght@400;500;600;700&family=Syne:wght@800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Inter+Tight:wght@500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root{
-  --bg:#0D0A20; --bg2:#120E2C; --card:#101A2E; --line:#1D2A44;
+  --bg:#0C0C0E; --bg2:#121215; --card:#101A2E; --line:#1D2A44;
   --text:#FFFFFF; --muted:#93A0B8; --ice:#9ACBFF;
   --blue:#168BFF; --red:#FF303F; --silver:#C7D0DD;
   --display:'Barlow Condensed','Arial Narrow',system-ui,sans-serif;
-  --body:'Barlow',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --body:'Inter',system-ui,-apple-system,'Segoe UI',sans-serif;
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
@@ -47,15 +47,10 @@ h2 b{color:var(--blue);font-weight:700} h2 b.r{color:var(--red)}
 
 /* nav */
 nav{position:fixed;top:0;left:0;right:0;z-index:50;padding:18px 0;transition:background .3s,border-color .3s;border-bottom:1px solid transparent}
-nav.scrolled{background:rgba(8,13,24,.78);backdrop-filter:blur(14px);border-color:var(--line)}
+nav.scrolled{background:rgba(12,12,14,.78);backdrop-filter:blur(14px);border-color:rgba(255,255,255,.09)}
 nav .wrap{display:flex;justify-content:space-between;align-items:center}
-.logo{font-family:'Syne',var(--display);font-weight:800;font-size:1.25rem}
+.logo{font-family:'Inter Tight',system-ui,sans-serif;font-weight:600;font-size:1.08rem;letter-spacing:-.02em}
 .logo b{color:#FF5C7A}
-.cursor,.cursor-dot{position:fixed;top:0;left:0;pointer-events:none;z-index:96;border-radius:50%;transform:translate(-50%,-50%)}
-.cursor{width:40px;height:40px;border:1.5px solid rgba(255,255,255,.6);box-shadow:0 0 18px rgba(190,160,255,.6),inset 0 0 12px rgba(190,160,255,.35);transition:width .3s,height .3s,background .3s,border-color .3s}
-.cursor.big{width:78px;height:78px;background:radial-gradient(circle at 35% 30%,rgba(255,255,255,.35),rgba(124,92,255,.15) 60%,transparent);border-color:#fff}
-.cursor-dot{width:6px;height:6px;background:#fff;box-shadow:0 0 10px #fff,0 0 20px #FF8CDC}
-@media (hover:none){.cursor,.cursor-dot{display:none}}
 .btn{display:inline-flex;align-items:center;gap:10px;padding:12px 24px;border-radius:999px;font-weight:600;font-size:.92rem;border:1px solid var(--line);transition:transform .25s,border-color .25s,background .25s;cursor:pointer;background:none;color:var(--text);font-family:inherit}
 .btn:hover{transform:translateY(-3px);border-color:var(--blue)}
 .btn.primary{background:var(--blue);border-color:var(--blue)}
@@ -231,7 +226,9 @@ nav .wrap{display:flex;justify-content:space-between;align-items:center}
 .next{text-align:center}
 .next h2{font-size:clamp(3rem,9vw,7rem)}
 .next p{color:var(--muted);max-width:620px;margin:0 auto 26px}
-footer{border-top:1px solid var(--line);padding:26px 0;color:var(--muted);font-size:.84rem;text-align:center}
+footer{border-top:1px solid rgba(255,255,255,.09);padding:28px 0;color:var(--muted);font-size:.86rem}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+footer a:hover{color:var(--text)}
 
 @media (max-width:900px){
   section{padding:76px 0}
@@ -258,9 +255,8 @@ footer{border-top:1px solid var(--line);padding:26px 0;color:var(--muted);font-s
 </head>
 <body>
 <div id="progress"></div>
-<div class="cursor" aria-hidden="true"></div><div class="cursor-dot" aria-hidden="true"></div>
 <nav id="nav"><div class="wrap">
-  <a href="index.html" class="logo">amandi<b>.</b></a>
+  <a href="index.html" class="logo">Amandi Hansika<b>.</b></a>
   <a href="index.html#work" class="btn">← All work</a>
 </div></nav>
 
@@ -853,7 +849,7 @@ footer{border-top:1px solid var(--line);padding:26px 0;color:var(--muted);font-s
     <a class="btn primary" href="index.html#work">← Back to all projects</a>
   </div>
 </section>
-<footer>© <span id="yr"></span> Amandi Hansika. All rights reserved.</footer>
+<footer><div class="wrap"><span>© <span id="yr"></span> Amandi Hansika</span><span>Case study · APEX Logo Branding</span><a href="index.html#work">← Back to all work</a></div></footer>
 
 <script>
 const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
@@ -965,12 +961,8 @@ addEventListener('scroll',()=>{$('#nav').classList.toggle('scrolled',scrollY>40)
   $('#progress').style.width=(scrollY/(document.documentElement.scrollHeight-innerHeight)*100)+'%'},{passive:true});
 $('#yr').textContent=new Date().getFullYear();
 
-/* cursor */
-const cur=$('.cursor'),dot=$('.cursor-dot');let cx=0,cy=0,tx=0,ty=0;
-addEventListener('mousemove',e=>{tx=e.clientX;ty=e.clientY;dot.style.left=tx+'px';dot.style.top=ty+'px'});
-(function loop(){cx+=(tx-cx)*.18;cy+=(ty-cy)*.18;cur.style.left=cx+'px';cur.style.top=cy+'px';requestAnimationFrame(loop)})();
-document.addEventListener('mouseover',e=>cur.classList.toggle('big',!!e.target.closest('a,button,.sw,.vt,.mt')));
+
 </script>
-<script src="ambient.js"></script>
+<script src="cursor.js"></script>
 </body>
 </html>
