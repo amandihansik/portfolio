@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>APEX Logo Branding — Case Study | Amandi Hansika</title>
+<meta name="description" content="Case study: APEX logo and brand identity for a computer hardware and technology brand, designed by Amandi Hansika.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Barlow:wght@400;500;600&family=Syne:wght@800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#080D18; --bg2:#0C1322; --card:#101A2E; --line:#1D2A44;
+  --text:#FFFFFF; --muted:#93A0B8;
+  --blue:#168BFF; --red:#FF303F; --silver:#C7D0DD;
+  --display:'Barlow Condensed','Arial Narrow',system-ui,sans-serif;
+  --body:'Barlow',system-ui,-apple-system,'Segoe UI',sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:var(--body);line-height:1.65;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+::selection{background:var(--blue);color:#fff}
+.wrap{width:min(1180px,92%);margin-inline:auto}
+section{padding:100px 0;position:relative}
+h1,h2,h3{font-family:var(--display);line-height:1;text-transform:uppercase;letter-spacing:.01em;font-weight:700}
+h2{font-size:clamp(2.6rem,6.4vw,5rem);margin-bottom:20px}
+h2 b{color:var(--blue);font-weight:700} h2 b.r{color:var(--red)}
+.eyebrow{font-size:.74rem;letter-spacing:.3em;text-transform:uppercase;color:var(--blue);font-weight:600;margin-bottom:16px;display:flex;gap:12px;align-items:center}
+.eyebrow::before{content:"";width:30px;height:2px;background:var(--red)}
+.lead{color:var(--muted);max-width:640px;font-size:1.06rem}
+.rv{opacity:0;transform:translateY(44px);transition:opacity .9s ease,transform .9s cubic-bezier(.2,.8,.2,1)}
+.rv.in{opacity:1;transform:none}
+
+/* nav */
+nav{position:fixed;top:0;left:0;right:0;z-index:50;padding:18px 0;transition:background .3s,border-color .3s;border-bottom:1px solid transparent}
+nav.scrolled{background:rgba(8,13,24,.78);backdrop-filter:blur(14px);border-color:var(--line)}
+nav .wrap{display:flex;justify-content:space-between;align-items:center}
+.logo{font-family:'Syne',var(--display);font-weight:800;font-size:1.25rem}
+.logo b{color:var(--red)}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:12px 24px;border-radius:999px;font-weight:600;font-size:.92rem;border:1px solid var(--line);transition:transform .25s,border-color .25s,background .25s;cursor:pointer;background:none;color:var(--text);font-family:inherit}
+.btn:hover{transform:translateY(-3px);border-color:var(--blue)}
+.btn.primary{background:var(--blue);border-color:var(--blue)}
+#progress{position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,var(--blue),var(--red));z-index:60}
+
+/* hero */
+.hero{position:relative;min-height:100vh;display:grid;place-items:center;text-align:center;overflow:hidden;padding:120px 0 80px}
+.rays{position:absolute;inset:-20%;background:repeating-conic-gradient(from 0deg at 50% 38%,rgba(22,139,255,.16) 0deg 4deg,transparent 4deg 14deg,rgba(255,48,63,.10) 14deg 16deg,transparent 16deg 26deg);mask-image:radial-gradient(circle at 50% 38%,#000 0,transparent 62%);-webkit-mask-image:radial-gradient(circle at 50% 38%,#000 0,transparent 62%);animation:spin 90s linear infinite;transform-origin:50% 38%}
+@keyframes spin{to{transform:rotate(360deg)}}
+.glow{position:absolute;width:520px;height:520px;border-radius:50%;filter:blur(110px);opacity:.35}
+.g1{background:var(--blue);top:8%;left:50%;transform:translateX(-70%)} .g2{background:var(--red);top:30%;left:50%;transform:translateX(10%);opacity:.18}
+.hero .wrap{position:relative;z-index:2}
+#logo{width:min(440px,78vw);height:auto;margin:0 auto 10px;overflow:visible;display:block}
+#logo *{transform-box:fill-box}
+.play .leg-b{animation:rise 1s cubic-bezier(.2,.8,.2,1) .15s both;transform-origin:50% 100%}
+.play .leg-s{animation:rise 1s cubic-bezier(.2,.8,.2,1) .4s both;transform-origin:50% 100%}
+.play .cap{animation:drop .9s cubic-bezier(.3,1.5,.5,1) 1.1s both,pulse 2.4s ease-in-out 2.4s infinite;transform-origin:50% 50%}
+.play .ltr{animation:letter .7s cubic-bezier(.2,.8,.2,1) both}
+.play .slash{animation:slash .7s cubic-bezier(.2,.8,.2,1) 2.3s both;transform-origin:50% 100%}
+.play .wcap{animation:drop .7s cubic-bezier(.3,1.5,.5,1) 2.45s both;transform-origin:50% 50%}
+@keyframes rise{from{transform:scaleY(0);opacity:0}to{transform:none;opacity:1}}
+@keyframes drop{from{transform:translateY(-90px) scale(.3);opacity:0}to{transform:none;opacity:1}}
+@keyframes pulse{50%{filter:drop-shadow(0 0 14px rgba(255,48,63,.95))}}
+@keyframes letter{from{transform:translateY(46px);opacity:0}to{transform:none;opacity:1}}
+@keyframes slash{from{transform:scaleY(0);opacity:0}to{transform:none;opacity:1}}
+.tagline{font-family:var(--display);font-weight:500;letter-spacing:.9em;text-transform:uppercase;color:var(--silver);font-size:clamp(.8rem,1.6vw,1.05rem);opacity:0;margin:18px 0 44px;padding-left:.9em}
+.play ~ .tagline{animation:tag 1.4s ease 2.7s both}
+@keyframes tag{from{opacity:0;letter-spacing:.2em}to{opacity:1;letter-spacing:.9em}}
+.hero h1{font-size:clamp(1.6rem,3.4vw,2.4rem);font-weight:600;letter-spacing:.06em}
+.hero p{color:var(--muted);margin:8px auto 26px;max-width:520px}
+
+/* overview */
+.over{display:grid;grid-template-columns:1.2fr 1fr;gap:70px;align-items:start}
+.over p{color:var(--muted);margin-bottom:16px;font-size:1.05rem}
+.meta{border:1px solid var(--line);border-radius:18px;background:var(--card);overflow:hidden}
+.meta div{display:flex;justify-content:space-between;gap:20px;padding:18px 24px;border-bottom:1px solid var(--line);font-size:.95rem}
+.meta div:last-child{border:0}
+.meta span:first-child{color:var(--muted);text-transform:uppercase;letter-spacing:.16em;font-size:.72rem;padding-top:3px}
+.meta span:last-child{text-align:right}
+
+/* idea */
+.band{background:var(--bg2);border-block:1px solid var(--line)}
+.three{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:44px}
+.part{padding:30px;border-radius:20px;border:1px solid var(--line);background:var(--card);border-top:3px solid var(--c);transition:transform .35s}
+.part:hover{transform:translateY(-8px)}
+.part svg{width:96px;height:96px;margin-bottom:18px}
+.part svg path{fill:#22304C;transition:fill .4s}
+.part svg path.hot{fill:var(--c)}
+.part:hover svg path.hot{filter:drop-shadow(0 0 10px var(--c))}
+.part h3{font-size:1.7rem;margin-bottom:8px}
+.part h3 i{font-style:normal;color:var(--c);margin-right:10px}
+.part p{color:var(--muted);font-size:.95rem}
+
+/* construction */
+.split{display:grid;grid-template-columns:1fr 1.15fr;gap:60px;align-items:center}
+.nums{display:grid;gap:14px;margin-top:30px}
+.num{display:flex;gap:22px;align-items:center;padding:18px 0;border-top:1px solid var(--line)}
+.num b{font:700 3.4rem var(--display);min-width:120px;color:var(--blue)}
+.num:nth-child(2) b{color:var(--red)} .num:nth-child(3) b{color:var(--silver)}
+.num span{color:var(--muted);font-size:.94rem}
+.shot{border-radius:18px;overflow:hidden;border:1px solid var(--line);cursor:zoom-in;background:var(--card)}
+.shot img{width:100%;transition:transform .8s cubic-bezier(.2,.8,.2,1)}
+.shot:hover img{transform:scale(1.04)}
+
+/* colour */
+.swatches{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-top:40px}
+.sw{border-radius:18px;height:230px;padding:20px;display:flex;flex-direction:column;justify-content:flex-end;cursor:pointer;border:1px solid var(--line);transition:transform .35s,flex .35s;font-size:.88rem;position:relative}
+.sw:hover{transform:translateY(-10px)}
+.sw b{font:600 1.25rem var(--display);text-transform:uppercase;letter-spacing:.04em}
+.sw small{opacity:.8}
+.sw em{position:absolute;top:16px;right:16px;font-style:normal;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;opacity:0;transition:opacity .25s}
+.sw:hover em{opacity:.85}
+
+/* type */
+.type{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:40px}
+.tcard{padding:34px;border:1px solid var(--line);border-radius:20px;background:var(--card)}
+.tcard small{color:var(--muted);letter-spacing:.2em;text-transform:uppercase;font-size:.7rem}
+.tcard .big{font:700 clamp(3rem,7vw,5.4rem)/1 var(--display);text-transform:uppercase;margin:14px 0}
+.tcard .big2{font:500 clamp(1.5rem,3vw,2.2rem)/1.25 var(--body);margin:14px 0}
+.tcard p{color:var(--muted);font-size:.92rem}
+
+/* lockups */
+.locks{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:40px}
+.lock{border-radius:20px;aspect-ratio:4/3;display:grid;place-items:center;border:1px solid var(--line);position:relative;overflow:hidden}
+.lock svg{width:58%;transition:transform .5s cubic-bezier(.2,.8,.2,1)}
+.lock:hover svg{transform:scale(1.1)}
+.lock span{position:absolute;left:18px;bottom:14px;font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;opacity:.7}
+
+/* boards */
+.boards{columns:2;column-gap:22px;margin-top:44px}
+.boards .shot{break-inside:avoid;margin-bottom:22px;position:relative}
+.boards .shot span{position:absolute;left:14px;top:14px;background:rgba(8,13,24,.8);backdrop-filter:blur(6px);padding:6px 12px;border-radius:99px;font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;opacity:0;transition:opacity .3s}
+.boards .shot:hover span{opacity:1}
+
+/* next */
+.next{text-align:center}
+.next h2{font-size:clamp(3rem,9vw,7rem)}
+footer{border-top:1px solid var(--line);padding:26px 0;color:var(--muted);font-size:.84rem;text-align:center}
+
+#lb{position:fixed;inset:0;background:rgba(4,7,14,.95);z-index:80;display:none;overflow:auto;padding:70px 4vw 40px;cursor:zoom-out}
+#lb.open{display:block;animation:fade .3s}
+@keyframes fade{from{opacity:0}}
+#lb img{margin:0 auto;max-width:min(1300px,100%);border-radius:12px}
+#lb button{position:fixed;top:18px;right:26px;font-size:2rem;background:none;border:0;color:#fff;cursor:pointer}
+
+@media (max-width:900px){
+  section{padding:76px 0}
+  .over,.split{grid-template-columns:1fr;gap:40px}
+  .three,.locks{grid-template-columns:1fr}
+  .swatches{grid-template-columns:repeat(2,1fr)} .sw{height:150px}
+  .type{grid-template-columns:1fr}
+  .boards{columns:1}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .rv,.tagline{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+<div id="progress"></div>
+<nav id="nav"><div class="wrap">
+  <a href="index.html" class="logo">amandi<b>.</b></a>
+  <a href="index.html#work" class="btn">← All work</a>
+</div></nav>
+
+<header class="hero">
+  <div class="rays"></div><div class="glow g1"></div><div class="glow g2"></div>
+  <div class="wrap">
+    <svg id="logo" class="play" viewBox="0 0 520 363" role="img" aria-label="APEX logo">
+      <g transform="translate(160 -14)">
+        <path class="leg-b" fill="#168BFF" d="M78 58 L96 58 L96 110 L82 138 L110 138 L122 162 L70 162 L58 186 L14 186 Z"/>
+        <path class="leg-s" fill="#C7D0DD" d="M122 58 L104 58 L104 110 L142 186 L186 186 Z"/>
+        <path class="cap" fill="#FF303F" d="M100 14 L118 50 L82 50 Z"/>
+      </g>
+      <g transform="translate(12.95 228) scale(1.35)" fill="#fff">
+        <path class="ltr" style="animation-delay:1.6s" d="M37 26 L47.5 26 L47.5 57 L39 74 L56 74 L63 88 L32 88 L26 100 L0 100 Z M63 26 L52.5 26 L52.5 57 L74 100 L100 100 Z"/>
+        <path class="ltr" style="animation-delay:1.75s" fill-rule="evenodd" d="M108 0 H168 L186 18 V48 L168 66 H134 V100 H108 Z M134 24 H162 V42 H134 Z"/>
+        <path class="ltr" style="animation-delay:1.9s" d="M194 0 H250 L264 14 V24 H220 V38 H256 V62 H220 V76 H264 V86 L250 100 H194 Z"/>
+        <path class="ltr" style="animation-delay:2.05s" d="M274 0 H302 L317 23.4 L303 45.3 Z M337 54.7 L366 100 H338 L323 76.6 Z"/>
+        <path class="slash" fill="#168BFF" d="M338 0 H366 L302 100 H274 Z"/>
+        <path class="wcap" fill="#FF303F" d="M50 0 L60.5 21 L39.5 21 Z"/>
+      </g>
+    </svg>
+    <div class="tagline">Reach the summit</div>
+    <h1>APEX Logo Branding</h1>
+    <p>Brand identity for a computer hardware and technology brand.</p>
+    <button class="btn" id="replay">↻ Replay animation</button>
+  </div>
+</header>
+
+<section>
+  <div class="wrap over">
+    <div class="rv">
+      <div class="eyebrow">Case study</div>
+      <h2>Built to <b>climb</b>.</h2>
+      <p>APEX makes computer hardware for people who push their machines to the limit: graphics cards, processors, memory and gaming gear. The brand needed a mark that feels fast, precise and engineered, and that stays sharp at any size, from a retail box down to a keycap.</p>
+      <p>The answer turns the letter A into a mountain peak. Three simple parts form one symbol, and the same angle, colours and shapes carry through the wordmark, the graphics and every application.</p>
+    </div>
+    <div class="meta rv">
+      <div><span>Project</span><span>APEX Logo Branding</span></div>
+      <div><span>Industry</span><span>Computer hardware &amp; technology</span></div>
+      <div><span>Role</span><span>Logo &amp; brand identity design</span></div>
+      <div><span>Deliverables</span><span>Logo system, colour, typography, graphic language, applications</span></div>
+      <div><span>Year</span><span>2026</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <div class="rv">
+      <div class="eyebrow">01 — The idea</div>
+      <h2>Reach the <b class="r">summit</b>.</h2>
+      <p class="lead">Three parts, one climb. Each piece of the symbol has its own colour and its own job.</p>
+    </div>
+    <div class="three" id="parts"></div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap split">
+    <div class="rv">
+      <div class="eyebrow">02 — Construction</div>
+      <h2>One angle. <b>One grid.</b></h2>
+      <p class="lead">The symbol is drawn on a square grid, and every diagonal follows the same slope, from the summit down to the last circuit notch.</p>
+      <div class="nums">
+        <div class="num"><b data-count="172">0</b><span><strong>Unit square.</strong> The symbol fits one square, with the summit on the centre axis.</span></div>
+        <div class="num"><b>2:1</b><span><strong>One angle.</strong> Every diagonal rises two units for each one across: 63.4° from the baseline.</span></div>
+        <div class="num"><b data-count="3">0</b><span><strong>Three parts.</strong> Cap, circuit leg and blade leg, each in its own colour.</span></div>
+      </div>
+    </div>
+    <div class="shot rv"><img src="images/apex/02_construction.jpg" alt="APEX symbol construction grid" loading="lazy"></div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <div class="rv">
+      <div class="eyebrow">03 — Logo system</div>
+      <h2>Pick the one that <b>fits</b>.</h2>
+      <p class="lead">Full colour for dark grounds, solid white for dark or blue, solid black for light and silver.</p>
+    </div>
+    <div class="locks" id="locks"></div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="rv">
+      <div class="eyebrow">04 — Colour</div>
+      <h2>Five colours. <b class="r">One red.</b></h2>
+      <p class="lead">Blue leads, graphite grounds it, silver carries the metal, and red is saved for the summit. Click a colour to copy its code.</p>
+    </div>
+    <div class="swatches rv" id="sw"></div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <div class="rv">
+      <div class="eyebrow">05 — Typography</div>
+      <h2>Tall, tight and <b>technical</b>.</h2>
+    </div>
+    <div class="type">
+      <div class="tcard rv"><small>Headlines</small><div class="big">Barlow Condensed</div><p>Narrow, upright capitals that echo the steep sides of the symbol.</p></div>
+      <div class="tcard rv"><small>Text</small><div class="big2">Barlow keeps specs and body copy clean and easy to read.</div><p>Aa Bb Cc Dd Ee Ff Gg 0123456789</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="rv">
+      <div class="eyebrow">06 — The full identity</div>
+      <h2>From grid to <b>hardware</b>.</h2>
+      <p class="lead">Every board from the brand guide: the system, the graphic language, usage rules and the logo on packaging, products, stationery and screens. Click any board to enlarge.</p>
+    </div>
+    <div class="boards" id="boards"></div>
+  </div>
+</section>
+
+<section class="next band">
+  <div class="wrap rv">
+    <div class="eyebrow" style="justify-content:center">Thanks for looking</div>
+    <h2>See more <b>work</b>.</h2>
+    <a class="btn primary" href="index.html#work" style="margin-top:14px">← Back to all projects</a>
+  </div>
+</section>
+<footer>© <span id="yr"></span> Amandi Hansika. All rights reserved.</footer>
+
+<div id="lb"><button aria-label="Close">×</button><img alt=""></div>
+
+<script>
+const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
+const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+const CAP="M100 14 L118 50 L82 50 Z", LEGB="M78 58 L96 58 L96 110 L82 138 L110 138 L122 162 L70 162 L58 186 L14 186 Z", LEGS="M122 58 L104 58 L104 110 L142 186 L186 186 Z";
+const icon=(a,b,c)=>`<svg viewBox="14 14 172 172"><path fill="${a}" d="${CAP}"/><path fill="${b}" d="${LEGB}"/><path fill="${c}" d="${LEGS}"/></svg>`;
+
+/* replay */
+$('#replay').onclick=()=>{const l=$('#logo');l.classList.remove('play');void l.getBoundingClientRect();l.classList.add('play')};
+
+/* idea parts */
+const PARTS=[["01","Summit","#FF303F",0,"The red cap marks the top of the climb. It is the only red in the symbol, so the eye lands there first."],
+             ["02","Circuit","#168BFF",1,"The blue leg steps down in short notches, like a trace routed across a circuit board."],
+             ["03","Metal","#C7D0DD",2,"The silver leg is one clean blade. It holds the shape up and carries the metal of the hardware."]];
+$('#parts').innerHTML=PARTS.map(([n,t,c,h,d],i)=>`<div class="part rv" style="--c:${c};transition-delay:${i*100}ms">
+  <svg viewBox="14 14 172 172"><path class="${h==0?'hot':''}" d="${CAP}"/><path class="${h==1?'hot':''}" d="${LEGB}"/><path class="${h==2?'hot':''}" d="${LEGS}"/></svg>
+  <h3><i>${n}</i>${t}</h3><p>${d}</p></div>`).join('');
+
+/* lockups */
+$('#locks').innerHTML=[["#080D18","Full colour · dark ground","#fff",icon("#FF303F","#168BFF","#C7D0DD")],
+  ["#168BFF","Solid white · blue ground","#fff",icon("#fff","#fff","#fff")],
+  ["#C7D0DD","Solid black · silver ground","#080D18",icon("#080D18","#080D18","#080D18")]]
+  .map(([bg,l,fg,s],i)=>`<div class="lock rv" style="background:${bg};color:${fg};transition-delay:${i*100}ms">${s.replace('<svg','<svg style="width:38%"')}<span>${l}</span></div>`).join('');
+
+/* swatches */
+const SW=[["Electric Blue","#168BFF","#fff"],["Performance Red","#FF303F","#fff"],["Graphite Black","#080D18","#fff"],["Metallic Silver","#C7D0DD","#080D18"],["Pure White","#FFFFFF","#080D18"]];
+$('#sw').innerHTML=SW.map(([n,h,f])=>`<div class="sw" data-hex="${h}" style="background:${h};color:${f}"><em>Copy</em><b>${n}</b><small>${h}</small></div>`).join('');
+$$('.sw').forEach(s=>s.onclick=()=>{const e=s.querySelector('em');try{navigator.clipboard.writeText(s.dataset.hex)}catch(_){}e.textContent='Copied';setTimeout(()=>e.textContent='Copy',1200)});
+
+/* boards */
+const BOARDS=[["00_cover","Cover"],["01_idea","The idea"],["03_system","Logo system"],["04_wordmark","Wordmark"],["05_colour","Colour"],["06_typography","Typography"],["07_graphics","Graphic language"],["08_variations","Variations"],["09_usage","Usage"],["10_product","On the hardware"],["11_stationery_digital","Stationery & digital"],["sheet","Logo sheet"],["12_closing","Closing"]];
+$('#boards').innerHTML=BOARDS.map(([f,t])=>`<div class="shot rv"><span>${t}</span><img src="images/apex/${f}.jpg" alt="APEX brand board: ${t}" loading="lazy"></div>`).join('');
+
+/* lightbox */
+const lb=$('#lb');
+$$('.shot').forEach(s=>s.onclick=()=>{lb.querySelector('img').src=s.querySelector('img').src;lb.classList.add('open');lb.scrollTop=0});
+lb.onclick=()=>lb.classList.remove('open');
+addEventListener('keydown',e=>{if(e.key==='Escape')lb.classList.remove('open')});
+
+/* reveal + counters */
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;e.target.classList.add('in');
+  e.target.querySelectorAll('[data-count]').forEach(b=>{const n=+b.dataset.count;if(reduce){b.textContent=n;return}let s=null;
+    requestAnimationFrame(function st(ts){s??=ts;const k=Math.min((ts-s)/1400,1);b.textContent=Math.round(n*(1-Math.pow(1-k,3)));if(k<1)requestAnimationFrame(st)})});
+  io.unobserve(e.target)}),{threshold:.12});
+$$('.rv').forEach(e=>io.observe(e));
+
+/* nav + progress */
+addEventListener('scroll',()=>{$('#nav').classList.toggle('scrolled',scrollY>40);
+  $('#progress').style.width=(scrollY/(document.documentElement.scrollHeight-innerHeight)*100)+'%'},{passive:true});
+$('#yr').textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
