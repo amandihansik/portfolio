@@ -53,7 +53,7 @@ void main(){
   col+=vec3(.75,.85,1.)*c*.42*smoothstep(.4,1.,uv.y);
   // soft depth, then fade into the page background at the bottom
   col*=1.-.22*length(p*vec2(.65,1.));
-  col=mix(col,vec3(.055,.055,.07),smoothstep(.2,0.,uv.y));
+  col=mix(col,vec3(.086,.063,.227),smoothstep(.2,0.,uv.y));
   col=pow(col,vec3(.95));
   gl_FragColor=vec4(col,1.);
 }`;

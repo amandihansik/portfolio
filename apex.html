@@ -10,7 +10,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Barlow:wght@400;500;600;700&family=Syne:wght@800&display=swap" rel="stylesheet">
 <style>
 :root{
-  --bg:#080D18; --bg2:#0C1322; --card:#101A2E; --line:#1D2A44;
+  --bg:#0D0A20; --bg2:#120E2C; --card:#101A2E; --line:#1D2A44;
   --text:#FFFFFF; --muted:#93A0B8; --ice:#9ACBFF;
   --blue:#168BFF; --red:#FF303F; --silver:#C7D0DD;
   --display:'Barlow Condensed','Arial Narrow',system-ui,sans-serif;
@@ -51,10 +51,10 @@ nav.scrolled{background:rgba(8,13,24,.78);backdrop-filter:blur(14px);border-colo
 nav .wrap{display:flex;justify-content:space-between;align-items:center}
 .logo{font-family:'Syne',var(--display);font-weight:800;font-size:1.25rem}
 .logo b{color:#FF5C7A}
-.cursor,.cursor-dot{position:fixed;top:0;left:0;pointer-events:none;z-index:90;border-radius:50%;transform:translate(-50%,-50%)}
-.cursor{width:38px;height:38px;border:1.5px solid rgba(255,255,255,.5);transition:width .25s,height .25s,background .25s,border-color .25s;mix-blend-mode:difference}
-.cursor.big{width:76px;height:76px;background:#fff;border-color:#fff}
-.cursor-dot{width:6px;height:6px;background:#FF5C7A}
+.cursor,.cursor-dot{position:fixed;top:0;left:0;pointer-events:none;z-index:96;border-radius:50%;transform:translate(-50%,-50%)}
+.cursor{width:40px;height:40px;border:1.5px solid rgba(255,255,255,.6);box-shadow:0 0 18px rgba(190,160,255,.6),inset 0 0 12px rgba(190,160,255,.35);transition:width .3s,height .3s,background .3s,border-color .3s}
+.cursor.big{width:78px;height:78px;background:radial-gradient(circle at 35% 30%,rgba(255,255,255,.35),rgba(124,92,255,.15) 60%,transparent);border-color:#fff}
+.cursor-dot{width:6px;height:6px;background:#fff;box-shadow:0 0 10px #fff,0 0 20px #FF8CDC}
 @media (hover:none){.cursor,.cursor-dot{display:none}}
 .btn{display:inline-flex;align-items:center;gap:10px;padding:12px 24px;border-radius:999px;font-weight:600;font-size:.92rem;border:1px solid var(--line);transition:transform .25s,border-color .25s,background .25s;cursor:pointer;background:none;color:var(--text);font-family:inherit}
 .btn:hover{transform:translateY(-3px);border-color:var(--blue)}
@@ -971,5 +971,6 @@ addEventListener('mousemove',e=>{tx=e.clientX;ty=e.clientY;dot.style.left=tx+'px
 (function loop(){cx+=(tx-cx)*.18;cy+=(ty-cy)*.18;cur.style.left=cx+'px';cur.style.top=cy+'px';requestAnimationFrame(loop)})();
 document.addEventListener('mouseover',e=>cur.classList.toggle('big',!!e.target.closest('a,button,.sw,.vt,.mt')));
 </script>
+<script src="ambient.js"></script>
 </body>
 </html>
